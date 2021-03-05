@@ -1,43 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap" rel="stylesheet');
 
-@media only screen and (max-width: 600px) {
-    body {
-        background-color: cornflowerblue; 
-    }
-    h3 {
-        color: beige;
-    }
-}
+
 
 body {
-    background-color:beige;
-    font-family: 'Orienta', sans-serif;
-    text-align: center;
-}
-
-h1 {
-    color: darkslategray
-}
-
-h3 {
-    color: cornflowerblue; 
+    font-family: 'Orienta', sans-serif;   
 }
 
 .form_1 {
     font-family: 'Orienta', sans-serif;
-    color: white;
     padding: 15px 32px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
   }
-
+  
   .form_2 {
     font-family: 'Orienta', sans-serif;
-    color: white;
     padding: 15px 32px;
     text-align: center;
     display: inline-block;
     font-size: 16px;
   }
 
+ 
+
+
+@media only screen and (min-width: 375px) {
+    body {
+        background-color: beige;
+        text-align: center;
+        margin: 0px; 
+    }
+    h3 {
+        color: darkslategray;
+    }
+    h1 {
+        color:pink;
+    }
+    h2 {
+        color: darkolivegreen;
+    }    
+    h4 {
+        color: rgb(106, 165, 165);
+    }
+}
+
+    @media only screen and (min-width: 400px) {
+    body {
+        background-color:cornflowerblue;
+        text-align: left;
+        margin: 20px;
+    }
+    h3 {
+        color: beige;
+    }
+    h1 {
+        color: darkolivegreen;
+    }
+    h2 {
+        color: pink;
+    }
+    h4 {
+        color: burlywood;
+        width: 600px;
+    }
+}

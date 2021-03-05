@@ -17,7 +17,9 @@ function handleGetData(event) {
       url: 'https://www.googleapis.com/books/v1/volumes?q=' + userInput + '&key=AIzaSyA9EhBD8PIV5V0PsAyf4jQDYRSx6ebyAMc'
       }).then(
         (data) => {
-         bookData = data;
+         console.log(data)
+          bookData = data.items;
+          console.log(bookData)
          render();
         },
         (error) => {
@@ -27,18 +29,35 @@ function handleGetData(event) {
 }
 
 function render() {
-    console.log(bookData);  
-    $author.text(bookData.volumeInfo && bookData.volumeInfo.authors ? bookData.volumeInfo.authors[0] : "No author available");
-    $category.text(bookData.volumeInfo && bookData.volumeInfo.categories ? bookData.volumeInfo.categories : "No category available");
-    $description.text(bookData.volumeInfo && bookData.volumeInfo.description ? bookData.volumeInfo.description : "No description available");
-    $length.text(bookData.volumeInfo && bookData.volumeInfo.pageCount ? bookData.volumeInfo.pageCount : "No page count available");
-    $rating.text(bookData.volumeInfo && bookData.volumeInfo.averageRating ? bookData.volumeInfo.averageRating : "No rating available");
-    $published.text(bookData.volumeInfo && bookData.volumeInfo.publishedDate ? bookData.volumeInfo.publishedDate : "No published date available");
+    console.log(bookData);
+    $("main").empty();
+    for (i = 0; i < bookData.length; i++){
+    const book = bookData[i]
+    renderOne(book);
+    }
  }
 
+function renderOne(book) {
+  $div = $("<div>")
 
+  $div.html(`
+  <h3> Author </h3>
+  <h4> ${book.volumeInfo.authors} </h4>
+  <h3> Category </h3>
+  <h4> ${book.volumeInfo.categories} </h4>
+  <h3> Description </h3>
+  <h4> ${book.volumeInfo.description} </h4>
+  <h3> Number of Pages </h3>
+  <h4> ${book.volumeInfo.pageCount} </h4>
+  <h3> Rating </h3>
+  <h4> ${book.volumeInfo.averageRating} </h4>
+  <h3> Year Published </h3>
+  <h4> ${book.volumeInfo.publishedDate} </h4>
+  <p> ----------------------------</p>
+  `
+  )
 
- // optional chaining and nullishh collition. basically what you have to do is create a function for each result. so if there's no author. you have to create a function that's like if this parameter doesn't exist, still run this code. 
-
-
+  const $main = $("main")
+  $main.append($div)
+}
 
