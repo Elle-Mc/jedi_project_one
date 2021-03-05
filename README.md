@@ -1,5 +1,5 @@
 # Baby Got Books
-##### A simple [web application](http://github.com) that displays book data using the Google book API. 
+##### A simple [web application](https://jedi-project-one.vercel.app/) that displays book data using the Google book API. 
 ----
 
 ### Technologies Used
@@ -21,11 +21,11 @@
 ---
 
 ### Getting Started
-- Click here to see the deployed app.
+- Click [here](https://jedi-project-one.vercel.app/) to see the deployed app.
 
 ---
 
-### Future Enhancements 
-- Images of the cover of books
-- Link to purchasing book
-- Layout of site for books to be in rows, as opposed to one long column
+### Planned Enhancements 
+- Show images of the cover of books
+- Stylize buttons
+- Layout of site will be changed to have the book info in rows, as opposed to one long column
