@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap" rel="stylesheet');
 
-
-
 body {
     font-family: 'Orienta', sans-serif;   
 }
@@ -27,32 +25,32 @@ body {
 
 @media only screen and (min-width: 375px) {
     body {
-        background-color: beige;
+        background-color: darkslateblue;
         text-align: center;
         margin: 0px; 
     }
     h3 {
-        color: darkslategray;
+        color: beige
     }
     h1 {
         color:pink;
     }
     h2 {
-        color: darkolivegreen;
+        color: honeydew;
     }    
     h4 {
-        color: rgb(106, 165, 165);
+        color: lavenderblush;
     }
 }
 
     @media only screen and (min-width: 400px) {
     body {
-        background-color:cornflowerblue;
+        background-color:beige;
         text-align: left;
         margin: 20px;
     }
     h3 {
-        color: beige;
+        color: cornflowerblue;
     }
     h1 {
         color: darkolivegreen;
@@ -61,7 +59,7 @@ body {
         color: pink;
     }
     h4 {
-        color: burlywood;
+        color: darkslateblue;
         width: 600px;
     }
 }
